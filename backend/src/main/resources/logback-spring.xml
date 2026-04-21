@@ -1,0 +1,13 @@
+<configuration>
+    <springProperty scope="context" name="appName" source="spring.application.name" defaultValue="three-tier-backend"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>{"timestamp":"%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX}","level":"%level","service":"${appName}","requestId":"%X{requestId:-na}","logger":"%logger{36}","message":"%msg"}%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
