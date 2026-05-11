@@ -1,0 +1,16 @@
+# Node
+node_modules/
+frontend/node_modules/
+
+# Builds
+backend/target/
+frontend/dist/
+
+# Local environment files
+.env
+**/.env
+
+# IDE/system
+.idea/
+.vscode/
+.DS_Store
